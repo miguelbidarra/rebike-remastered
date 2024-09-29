@@ -2,6 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { useSession, signOut } from "next-auth/react";
+import Image from "next/image";
 
 const Navbar = () => {
   const { data: session } = useSession();
@@ -13,7 +14,13 @@ const Navbar = () => {
   return (
     <div className="flex justify-between items-center m-4 bg-white text-text">
       <Link href="/bicycles">
-        <img src="/rebike.svg" alt="Logo" className="h-8 w-8 cursor-pointer" />
+        <Image
+          src="/rebike.svg"
+          alt="Logo"
+          width={32}
+          height={32}
+          className="cursor-pointer"
+        />
       </Link>
       <div className="absolute left-1/2 transform -translate-x-1/2 text-3xl font-bold">
         <span className="text-primary">re</span>

@@ -42,7 +42,7 @@ const SignInForm = () => {
       router.refresh();
       router.push("/");
     }
-  }, [session]);
+  }, [session,router]);
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-background">
